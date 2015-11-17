@@ -1,6 +1,6 @@
 {
   "name": "tennu-aseen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin for the tennu IRC framework, uses logging db to find last seen users.",
   "main": "plugin.js",
   "repository": {
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Victorio Berra",
-  "license": "WTFPL",
+  "license": "ISC",
   "dependencies": {
     "bluebird": "^3.0.5",
     "moment": "^2.10.6"
