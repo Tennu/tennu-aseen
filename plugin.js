@@ -1,5 +1,3 @@
-var Promise = require('bluebird');
-
 var TennuAdvancedSay = {
     requiresRoles: ['dbcore'],
     init: function(client, imports) {
