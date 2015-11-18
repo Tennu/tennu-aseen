@@ -1,6 +1,6 @@
 {
   "name": "tennu-aseen",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A plugin for the tennu IRC framework, uses logging db to find last seen users.",
   "main": "plugin.js",
   "repository": {
