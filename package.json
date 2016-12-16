@@ -18,7 +18,7 @@
     "moment": "^2.10.6"
   },
   "peerDependencies": {
-    "tennu-dbcore": "^2",
-    "tennu-dblogger": "^2"
+    "tennu-dbcore": "^3",
+    "tennu-dblogger": "^3"
   }
 }
