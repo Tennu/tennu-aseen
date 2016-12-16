@@ -1,6 +1,10 @@
+var path = require('path');
+
 var TennuAdvancedSay = {
-    requiresRoles: ['dbcore'],
+    requiresRoles: ['dblogger', 'dbcore'],
     init: function(client, imports) {
+
+        const knex = imports.dbcore.knex;
 
         const helps = {
             "aseen": [
@@ -14,9 +18,7 @@ var TennuAdvancedSay = {
         };
 
         // dbcore is a promise. It is returned after migrations are complete.
-        const dbASeenPromise = imports.dbcore.then(function(knex) {
-            return require('./aseen')(knex);
-        });
+        var aseen = require('./lib/aseen')(knex);
 
         var lastSeen = (function() {
             return function(command) {
@@ -29,11 +31,9 @@ var TennuAdvancedSay = {
                     errorResponse.message = 'This command is not avalible as a PM.';
                     return errorResponse;
                 }
-                return dbASeenPromise.then(function(aseen) {
-                    return aseen.find(command.args[0], command.channel).then(function(result) {
-                        return result;
-                    });
-                })
+                return aseen.find(command.args[0], command.channel).then(function(result) {
+                    return result;
+                });
             }
         })();
 

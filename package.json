@@ -1,6 +1,6 @@
 {
   "name": "tennu-aseen",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "A plugin for the tennu IRC framework, uses logging db to find last seen users.",
   "main": "plugin.js",
   "repository": {
@@ -16,5 +16,9 @@
   "dependencies": {
     "bluebird": "^3.0.5",
     "moment": "^2.10.6"
+  },
+  "peerDependencies": {
+    "tennu-dbcore": "^2",
+    "tennu-dblogger": "^2"
   }
 }
